@@ -52,6 +52,6 @@ contract Exemplovariavel {
     // 'msg.sender' é o endereço que chama a função
     function registrarmeuendereco(string memory _meunome) external {
         contaRegistrada = msg.sender; // Define 'contaRegistrada' como o endereço do chamador
-        nome = _meunome; // Define 'nome' como '_meunome'.
+        nome = _meunome; // Define 'nome' como '_meunome'
     }
 }
