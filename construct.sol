@@ -28,7 +28,6 @@ contract construct {
         // Se não for, a transação é revertida com uma mensagem de erro.
         require(msg.sender == owner, "Somente o criador pode definir o nome");
 
-        // Se a verificação passar, define a variável 'name' com o valor passado no parâmetro '_newName'.
         name = _newName;
     }
 }
