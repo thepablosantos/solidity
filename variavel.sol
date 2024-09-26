@@ -55,5 +55,3 @@ contract Exemplovariavel {
         nome = _meunome; // Define 'nome' como '_meunome'
     }
 }
-
-//
