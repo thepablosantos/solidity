@@ -29,4 +29,4 @@ contract petition {
         return nameCount >= 3;
     }
 
-}
+} //
