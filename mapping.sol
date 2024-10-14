@@ -3,14 +3,10 @@ pragma solidity ^0.8.9;
 
 contract VerificarIdade {
 
-    mapping (string => uint) private idade;
+    mapping(uint => string) public idade;
 
-    function registrarIdade(string memory _nome, uint _idade) public {
-        idade[_nome] = _idade;
-    }
-
-    function consultarIdade(string memory _nome) public view returns (uint) {
-        return idade[_nome];
+    function registrarIdade(uint _idade, string memory _nome) public {
+        idade[_idade] = _nome;
     }
 
 }
