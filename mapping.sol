@@ -7,6 +7,6 @@ contract VerificarIdade {
 
     function registrarIdade(uint _idade, string memory _nome) public {
         idade[_idade] = _nome;
-    }
+    } //
 
 }
