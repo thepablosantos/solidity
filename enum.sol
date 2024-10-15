@@ -56,5 +56,3 @@ contract Storage {
     }
 
 }
-
-//  
