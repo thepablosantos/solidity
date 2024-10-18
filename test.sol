@@ -22,5 +22,3 @@ modifier onlyOwner () {
     require(msg.sender == owner "Apenas o criador pode alterar.");
     _;
 }
-
-// add other requirement models
