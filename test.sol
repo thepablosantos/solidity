@@ -1,24 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-contract Heranca {
+contract Arrays {
 
-    address public endereco;
-    address public owner = msg.sender;
+    string[] public textos;
 
-
-    modifier onlyOwner () {
-        require(msg.sender == owner, "Somente o dono pode alterar.");
-        _;
+    function novoElemento(string memory novoTexto) public {
+        textos.push(novoTexto);
     }
 
-    function alteraEnd() public onlyOwner {
-        endereco = msg.sender;
-    }
-
-}
-
-modifier onlyOwner () {
-    require(msg.sender == owner "Apenas o criador pode alterar.");
-    _;
 }
