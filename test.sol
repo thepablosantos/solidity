@@ -1,16 +1,19 @@
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.19;
 
-contract Arrays {
+contract Persons {
 
-    string[] public textos;
-
-    function novoElemento(string memory novoTexto) public {
-        textos.push(novoTexto);
+    struct person {
+        string public name;
+        uint public age;
+        bool public brazilian;
     }
 
-    function removeElemento() public {
-        textos.pop();
+    construct() {
+        name = "Pablo";
+        age = 31;
+        brazilian = true;
     }
 
 }
