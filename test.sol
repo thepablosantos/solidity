@@ -12,10 +12,10 @@ contract Persons {
 
     Person public person;
 
-    constructor() {
-        person.name = "Pablo";
-        person.age = 31;
-        person.brazilian = true;
+    constructor(string memory _name, uint _age, bool _brazilian) {
+        person.name = _name;
+        person.age = _age;
+        person.brazilian = _brazilian;
     }
 
 }
