@@ -5,15 +5,15 @@ pragma solidity ^0.8.19;
 contract Persons {
 
     struct person {
-        string public name;
-        uint public age;
-        bool public brazilian;
+        string name;
+        uint age;
+        bool brazilian;
     }
 
-    construct() {
-        name = "Pablo";
-        age = 31;
-        brazilian = true;
+    constructor() {
+        person.name = "Pablo";
+        person.age = 31;
+        person.brazilian = true;
     }
 
 }
