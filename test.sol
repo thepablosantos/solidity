@@ -9,4 +9,8 @@ contract Arrays {
         textos.push(novoTexto);
     }
 
+    function removeElemento() public {
+        textos.pop();
+    }
+
 }
