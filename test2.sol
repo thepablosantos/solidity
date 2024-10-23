@@ -6,4 +6,4 @@ contract bloco {
     function Tempo() public view returns (uint) {
         return block.timestamp;
     }
-} 
+} //
