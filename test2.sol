@@ -2,12 +2,24 @@
 
 pragma solidity ^0.8.19;
 
-contract dono {
+contract Enquanto {
 
-    address endereco = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+    function repeat() public pure returns (uint) {
 
-    function getValue() public view returns (uint) {
-        return endereco.balance;
+        uint contagem;
+        uint soma;
+
+        while (contagem < 10) {
+            contagem++;
+
+            if (contagem == 5) {
+                break;
+            }
+            soma++
+        }
+
+    return soma;
+
     }
 
 }
