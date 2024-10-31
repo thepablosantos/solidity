@@ -2,6 +2,10 @@
 
 pragma solidity ^0.8.19;
 
+constructor () {
+    
+}
+
 contract Enquanto {
 
     function repeat() public pure returns (uint) {
@@ -22,4 +26,4 @@ contract Enquanto {
 
     }
 
-} //
+} 
