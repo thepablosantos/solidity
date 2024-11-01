@@ -3,7 +3,7 @@
 pragma solidity ^0.8.19;
 
 constructor () {
-    
+
 }
 
 contract Enquanto {
@@ -26,4 +26,4 @@ contract Enquanto {
 
     }
 
-} 
+} //
