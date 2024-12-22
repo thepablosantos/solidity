@@ -2,9 +2,14 @@
 
 pragma solidity ^0.8.1;
 
-constructor wallet {
+constructor pessoa {
 
-    
+string public nome;
+uint private idade;
+bool internal nacionalidade;
 
+function setname (string memory _nome) public {
+    nome = _nome;
+}
 
 }
