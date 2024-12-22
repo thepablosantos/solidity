@@ -1,3 +1,5 @@
+/*
+
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.19;
@@ -27,4 +29,18 @@ contract pessoa {
     function getNacionality() public view returns (bool) {
         return brasileiro;
     }
+}
+
+*/
+
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.19;
+
+contract person {
+
+    string public name = "Pablo";
+    uint private age = 31;
+    bool internal brazilian = true;
+
 }
