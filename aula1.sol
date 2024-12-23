@@ -23,8 +23,16 @@ contract person {
         age = _age;
     }
 
+    function setBrazilian (bool _brazilian) public {
+        brazilian = _brazilian;
+    }
+
     function getAge() public view returns (uint) {
         return age;
+    }
+
+    function getNacionality() public view returns (bool) {
+        return brazilian;
     }
 
 }
