@@ -19,4 +19,8 @@ contract person {
         name = _name;
     }
 
+    function setAge (uint _age) public {
+        age = _age;
+    }
+
 }
