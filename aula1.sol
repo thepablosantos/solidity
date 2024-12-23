@@ -23,4 +23,8 @@ contract person {
         age = _age;
     }
 
+    function getAge() public view returns (uint) {
+        return age;
+    }
+
 }
