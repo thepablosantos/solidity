@@ -16,6 +16,12 @@ contract person {
 
     }
 
+    function setNat(bool _brazilian) public {
+        brazilian = _brazilian;
+    }
 
+    function getNat() public view returns (bool) {
+        return brazilian;
+    }
 
 }
