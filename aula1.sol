@@ -8,4 +8,12 @@ contract person {
     uint public age;
     bool private brazilian;
 
+    constructor() {
+
+        name = "Pablo";
+        age = 31;
+        brazilian = true;
+
+    }
+
 }
