@@ -16,4 +16,8 @@ contract person {
 
     }
 
+    function getnat() public view returns (bool) {
+        return brazilian;
+    }
+
 }
