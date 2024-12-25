@@ -1,27 +1,17 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.19;
+pragma solidity ^0.8.18;
 
 contract person {
 
     string public name;
     uint public age;
-    bool private brazilian;
+    address public owner;
 
-    constructor() {
-
-        name = "Pablo";
-        age = 31;
-        brazilian = true;
-
-    }
-
-    function setNat(bool _brazilian) public {
-        brazilian = _brazilian;
-    }
-
-    function getnat() public view returns (bool) {
-        return brazilian;
+    constructor (string memory _name, uint _age) {
+        name = _name;
+        age = _age;
+        owner = msg.sender;
     }
 
 }
