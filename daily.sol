@@ -4,20 +4,31 @@ pragma solidity ^0.8.9;
 
 contract Aluno {
 
-    string public gradeStatus;
+    string public student;
+    uint public value;
     
     constructor() {
-        gradeStatus = "empty";
+        student = "empty";
+        value = 0;
     }
 
 
-    function updateGradeStatus(uint _value) public {
-        if (_value >= 7) {
-            gradeStatus = "Aprovado";
-        } else if (_value == 0) {
-            gradeStatus = "Zero";
+    function setStudent(string memory _student) public {
+        student = _student;
+    }
+
+    function setValue(uint _value) public {
+        require(_value <= 10, "Nota invalida.");
+        value = _value;
+    }
+
+    function getGradeStatus() public view returns (string memory) {
+        if (value == 0) {
+            return "Zero";
+        } else if (value > 7) {
+            return "Aprovado";
         } else {
-            gradeStatus = "Reprovado";
+            return "Reprovado";
         }
     }
 }
