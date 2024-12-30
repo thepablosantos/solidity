@@ -1,34 +1,58 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifer: MIT
 
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.19;
 
-contract Aluno {
+contract personData {
 
-    string public student;
-    uint public value;
-    
+    string public name;
+    string public gradeStatus;
+    uint public grade;
+    uint private age;
+    bool internal brazilian;
+
+
     constructor() {
-        student = "empty";
-        value = 0;
+
+        name = "Jeremias";
+        gradeStatus = "empty";
+        age = 10;
+        brazilian = true;
     }
 
-
-    function setStudent(string memory _student) public {
-        student = _student;
+    function setName(string memory _name) public {
+        name = _name;
     }
 
-    function setValue(uint _value) public {
-        require(_value <= 10, "Nota invalida.");
-        value = _value;
+    function setAge(uint _age) public {
+        age = _age;
     }
 
-    function getGradeStatus() public view returns (string memory) {
-        if (value == 0) {
+    function setNationality(bool _brazilian) public {
+        brazilian = _brazilian;
+    }
+
+    function setGrade(uint _grade) public {
+        require(_grade <= 10, "Invalid grade");
+        grade = _grade;
+    }
+
+    function getAge() public view returns (uint) {
+        return age;
+    }
+
+    function getNat() public view returns (bool) {
+        return brazilian;
+    }
+
+    function getStatus() public view returns (string memory) {
+
+        if (grade == 0) {
             return "Zero";
-        } else if (value > 7) {
+        } else if (grade > 7) {
             return "Aprovado";
         } else {
             return "Reprovado";
         }
     }
+
 }
