@@ -13,6 +13,11 @@ contract CrowdFunding {
         owner = msg.sender;
     }
 
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Withdraw only by contract owner!");
+        _;
+    }
+
     function fund() public payable {
         funders.push(msg.sender);
 
@@ -21,8 +26,8 @@ contract CrowdFunding {
         emit NewFunding(msg.sender, msg.value);
     }
 
-    function withdraw() public payable {
-        require(msg.sender == owner, "Withdraw only by contract owner!");
+    function withdraw() public payable onlyOwner {
+
         payable(msg.sender).transfer(address(this).balance);
 
         for(uint256 i = 0; i < funders.length; i++){
